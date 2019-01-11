@@ -1,0 +1,36 @@
+.section-9 {
+	background: url("../img/fifth-bg.png") no-repeat;
+	background-size: cover;
+	height: 627px;
+	padding: 46px 0 130px 0;
+	.transparent-block {
+		background: rgba(255, 255, 255, .8);
+		padding: 40px 15px;
+		p {
+			text-transform: uppercase;
+			font-size: 20px;
+			color: #333333;
+			text-align: center;
+		}
+		h2 {
+			line-height: 48px;
+			margin: 20px 0;
+		}
+	}
+	.numbers {
+		margin-top: 50px;
+		a {
+			display: block;
+			font-size: 36px;
+			text-align: center;
+			color: #173b72;
+			font-weight: 600;
+			text-decoration: none;
+		}
+		p {
+			font-size: 18px;
+			text-transform: none;
+			margin-bottom: 20px;
+		}
+	}
+}

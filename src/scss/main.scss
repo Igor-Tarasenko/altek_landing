@@ -1,0 +1,78 @@
+@import 'libs';
+@import 'fonts';
+// colors
+$body-background: #ffffff;
+$white-color: #ffffff;
+
+// fonts
+$fira-font:'Fira Sans', sans-serif;
+$fira-font: 'Montserrat', sans-serif;
+
+html {
+  	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 400;
+	background: $body-background;
+	font-family: $fira-font;
+}
+h1 {
+	font-family: $fira-font;
+	font-size: 42px;
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 23px;
+	text-align: center;
+}
+h2 {
+	font-family: $fira-font;
+	font-size: 42px;
+	color: #173b72;
+	text-transform: uppercase;
+	font-weight: 500;
+	margin-bottom: 0;
+	text-align: center;
+}
+h3 {
+	font-family: $fira-font;
+	font-size: 24px;
+	color: #173b72;
+	font-weight: 500;
+	margin-bottom: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+h4 {
+	font-family: $fira-font;
+	font-size: 24px;
+	text-transform: uppercase;
+	margin: 0;
+	color: $white-color;
+}
+a {
+	color: inherit;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+p {
+	margin-bottom: 0;
+}
+b {
+	font-weight: bold;
+}
+
+@import 'index';

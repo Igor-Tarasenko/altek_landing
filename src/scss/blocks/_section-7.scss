@@ -1,0 +1,77 @@
+.section-7 {
+	background: url("../img/fours-bg.png") no-repeat 0 -78px;
+	background-size: cover;
+	padding: 25px 0 60px 0;
+	.block-with-slayder {
+		background: #ffffff;
+		padding: 40px 15px;
+		border-radius: 5px;
+	}
+	h2 {
+		margin-bottom: 20px;
+	}
+	.slayd {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.slayd_text {
+		a {
+			color: #30518e;
+			text-decoration: underline;
+			font-size: 18px;
+			font-weight: bold;
+			display: block;
+			margin-top: 20px;
+		}
+		.text-description {
+			display: flex;
+			align-items: baseline;
+			justify-content: flex-start;
+			flex-flow: row wrap;
+			margin-top: 20px;
+			p {
+				font-size: 20px;
+				color: #333333;
+				font-weight: 600;
+				&:first-child {
+					text-transform: uppercase;
+					font-weight: 300;
+					margin-right: 10px;
+				}
+			}
+		}
+		.price {
+			p {
+				&:last-child {
+					color: #f88f3b;
+					font-size: 36px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.carousel-control-prev-icon {
+		background: url("../img/prev-arrow.png") no-repeat;
+		width: 30px;
+		height: 57px;
+	}
+	.carousel-control-next-icon {
+		background: url("../img/next-arrow.png") no-repeat;
+		width: 30px;
+		height: 57px;
+	}
+	.carousel-control-prev, .carousel-control-next {
+		width: 3%;
+	}
+	.btn-block {
+		margin-top: 40px;
+	}
+	.btn {
+		background: #fcdd4a;
+		border-radius: 5px;
+		padding: 16px 16px;
+		width: 363px;
+	}
+}
