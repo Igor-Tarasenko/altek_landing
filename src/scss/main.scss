@@ -74,5 +74,8 @@ p {
 b {
 	font-weight: bold;
 }
+button:focus {
+	outline: none;
+}
 
 @import 'index';

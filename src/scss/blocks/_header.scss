@@ -1,17 +1,20 @@
 header {
 	.header-link {
+		display: flex;
+		justify-content: flex-end;
 		a {
 			color: #173b72;
 			text-decoration: none;
-			font-size: 30px;
+			font-size: 27px;
 			display: inline-block;
-			min-height: 50px;
-			min-width: 50px;
+			min-height: 40px;
+			min-width: 40px;
 			margin-right: 10px;
+			margin-top: 25px;
 		}
 	}
 	.facebook {
-		background: url("../img/facebook-icon.png") no-repeat;
+		background: url("../img/facebook-icon.png") no-repeat right;
 		background-size: contain;
 	}
 	.instagram {
@@ -20,14 +23,17 @@ header {
 	}
 	.phone {
 		background: url("../img/phone-icon.png") no-repeat left center;
-		padding-left: 63px;
+		background-size: contain;
+		padding-left: 50px;
 	}
 	.current-lang {
 		background: #fcdd4a;
 		display: inline-block;
+		padding: 0 6px;
 		ul {
 			list-style-type: none;
 			padding-left: 0;
+			margin-top: 33px;
 			li {
 				display: inline-block;
 				font-family: $fira-font;
@@ -35,9 +41,14 @@ header {
 				color: #333333;
 				cursor: pointer;
 				text-transform: uppercase;
+				line-height: 18px;
 				&:first-child {
 					border-right: 1px solid #333333;
+					padding-right: 5px;
 				}
+			}
+			.active {
+				text-decoration: underline;
 			}
 		}
 	}
@@ -49,6 +60,7 @@ header {
 			align-items: center;
 			justify-content: space-between;
 			padding-left: 0;
+			width: 100%;
 			li {
 				a {
 					font-family: $fira-font;
@@ -58,5 +70,8 @@ header {
 				}
 			}
 		}
+	}
+	.navbar {
+		padding: 0;
 	}
 }

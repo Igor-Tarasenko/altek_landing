@@ -1,0 +1,49 @@
+.section-12 {
+	position: relative;
+	.contacts-block {
+		position: absolute;
+		top: 60px;
+		width: 488px;
+		left: 20%;
+		background: rgba(255, 255, 255, .8);
+		padding-bottom: 50px;
+		ul {
+			list-style-type: none;
+			margin-top: 40px;
+			margin-left: 20px;
+			li {
+				display: inline-block;
+				padding-left: 40px;
+				background: url("../img/icon-palce.png") no-repeat left center;
+				p, a {
+					display: block;
+					font-size: 16px;
+					color: #333333;
+				}
+				&:last-child {
+					margin-left: 35px;
+					background: url("../img/icon-phone.png") no-repeat left center;
+				}
+				&:first-child {
+					width: 203px;
+					p {
+						&:nth-child(2) {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+	.contacts-block_header {
+		background: #173b72;
+		padding: 34px 0;
+		p {
+			color: #ffffff;
+			font-size: 24px;
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}

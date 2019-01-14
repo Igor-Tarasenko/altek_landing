@@ -2,6 +2,7 @@
 	padding: 50px 0;
 	.how_it_works {
 		margin-top: 30px;
+		padding-top: 120px;
 	}
 	.step {
 		padding: 15px;
@@ -60,8 +61,30 @@
 	.slider {
 		margin-top: 30px;
 	}
-	.slide {
+	.carousel-inner {
 		border: 2px solid #f0eeee;
+	}
+	.carousel-indicators {
+		bottom: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		li {
+			width: auto;
+			height: auto;
+			text-indent: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.active {
+			background: #ffffff;
+			color: #333333;
+			border-top: 1px solid #bababa;
+			border-bottom: 1px solid #bababa;
+			border-left: 1px solid #bababa;
+			border-right: 1px solid #bababa;
+		}
+	}
+	.slide {
 		img {
 			width: 100%;
 		}
@@ -79,6 +102,19 @@
 					text-align: center;
 				}
 			}
+		}
+		.carousel-control-prev, .carousel-control-next {
+			width: 6%;
+		}
+		.carousel-control-prev-icon {
+			background: url("../img/arrow-left.png") no-repeat center left;
+			width: 30px;
+			height: 57px;
+		}
+		.carousel-control-next-icon {
+			background: url("../img/arrow-right.png") no-repeat center left;
+			width: 30px;
+			height: 57px;
 		}
 	}
 }

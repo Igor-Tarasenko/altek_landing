@@ -92,9 +92,35 @@ $(document).ready(function() {
             $('.pool .link_for_description p').text("скрыть характеристики");
             $('.pool .link_for_description p').css('color', '#737373');
         } else {
-            $('.pool .link_for_description p').text("открыть характеристики")
+            $('.pool .link_for_description p').text("открыть характеристики");
             $('.pool .link_for_description p').css('color', '#30518e');
         }
+    });
+    $('.question').click(function () {
+        $('.question span').removeClass('open');
+        $('.answer').hide(300);
+        $(this).find('.answer').show(300);
+        $(this).find('span').addClass('open');
+    });
+    $('.section-11 .btn').click(function () {
+        $('.question-block-more').show();
+    });
+    $('.section-7 .btn').click(function () {
+        $('.more-project').slideToggle();
+        if  ($('.section-7 .carousel-control-prev').css('display') !== 'none') {
+            $('.section-7 .carousel-control-prev, .section-7 .carousel-control-next').hide();
+        } else {
+            $('.section-7 .carousel-control-prev, .section-7 .carousel-control-next').show();
+        }
+    });
+    $("a.topLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+        return false;
     });
 });
 /*
