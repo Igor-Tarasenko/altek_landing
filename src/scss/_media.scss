@@ -256,6 +256,19 @@
 		background: url(../img/first-bg.png) no-repeat -241px -56px;
 	}
 }
+@media screen and (max-width: 540px) {
+	.section-3 .carousel-indicators li {
+		max-width: 155px;
+	}
+}
+@media screen and (max-width: 495px) {
+	.section-3 .step {
+		padding: 15px 0;
+	}
+	.section-3 .carousel-indicators li {
+		max-width: 136px;
+	}
+}
 @media screen and (max-width: 483px) {
 	.section-12 .contacts-block {
 		width: auto;
@@ -297,17 +310,19 @@
 		background: url(../img/insta-icon.png) no-repeat center;
 		background-size: contain;
 	}
-	header .current-lang ul li {
+	header .language ul li {
 		font-size: 14px;
 	}
 }
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 437px) {
 	.section-3 .carousel-indicators {
 		display: none;
 	}
 	.section-3 .how_it_works {
 		padding-top: 0px;
 	}
+}
+@media screen and (max-width: 385px) {
 	.section-6 .form-group .btn2 {
 		padding-left: 0;
 	}
