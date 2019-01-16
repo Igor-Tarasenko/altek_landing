@@ -112,6 +112,13 @@
 	.section-12 .contacts-block ul li p, .section-12 .contacts-block ul li a {
 		font-size: 14px;
 	}
+	.modal-dialog input {
+		font-size: 14px;
+		padding: 10px 0 10px 20px;
+	}
+	.modal-dialog .jq-selectbox__select {
+		padding-left: 20px;
+	}
 }
 @media screen and (max-width: 991px) {
 	header .header-link .phone-text {
@@ -196,6 +203,9 @@
 	.navbar-collapse {
 		margin: 12px 0;
 	}
+	.modal-dialog {
+		max-width: 80%;
+	}
 }
 @media screen and (max-width: 767px) {
 	h1 {
@@ -254,6 +264,9 @@
 	}
 	.section-1 {
 		background: url(../img/first-bg.png) no-repeat -241px -56px;
+	}
+	.modal-dialog {
+		margin: 1.75rem auto;
 	}
 }
 @media screen and (max-width: 540px) {
@@ -320,6 +333,12 @@
 	}
 	.section-3 .how_it_works {
 		padding-top: 0px;
+	}
+	.modal-dialog h4 {
+		font-size: 19px;
+	}
+	.modal-dialog .modal-content {
+		padding: 30px 20px 30px 20px;
 	}
 }
 @media screen and (max-width: 385px) {

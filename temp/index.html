@@ -7,6 +7,67 @@
     <link href="./css/main.css" rel="stylesheet">
 </head>
 <body>
+<!-- Modal Window -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <h4>Заполните форму и мы свяжемся с вами</h4>
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="phone" class="form-control" placeholder="Контактный телефон">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Ваш E-Mail">
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Выберите пакет</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Мощность станции</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Регион установки</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+            </form>
+            <div class="btn-block">
+                <input type="submit" class="btn" data-dismiss="modal" value="ОТПРАВИТЬ ЗАЯВКУ">
+            </div>
+        </div>
+    </div>
+</div>
 <header>
     <div class="container">
         <div class="row">
@@ -96,7 +157,7 @@
                     <p>«Аltek» предлагает уже сегодня делать то, о чём другие будут думать только завтра!</p>
                 </div>
                 <div class="col-12 btn-block">
-                    <button class="btn">заказать бесплатный расчет</button>
+                    <button class="btn" data-toggle="modal" data-target="#exampleModal">заказать бесплатный расчет</button>
                 </div>
             </div>
         </div>
@@ -401,7 +462,7 @@
             </div>
         </div>
     </section>
-    <section class="section-5" id="collapse-group" role="tablist" aria-multiselectable="true">
+    <section class="section-5">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -410,7 +471,7 @@
                     <p>Мы предлагаем три пакетных предложения на сетевые солнечные электростанции мощностью от 5 до 30 кВт.:</p>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="package standard">
+                    <div class="package standard" id="collapse-group" role="tablist" aria-multiselectable="true">
                         <div class="standard-header">
                             <p>пакет <span>STANDART</span></p>
                         </div>
@@ -434,157 +495,221 @@
                                     data-parent="#collapse-group">30 кВт</button>
                         </div>
                         <div class="package_description">
-                            <div class="row show-block collapse show" data-parent="#collapse-group" id="first">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse show" data-parent="#collapse-group" id="first">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
                                 </div>
-                            </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="second">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
-                                </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
-                                </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="third">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse" data-parent="#collapse-group" id="second">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
                                 </div>
-                            </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="fours">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
-                                </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
-                                </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="fifth">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse" data-parent="#collapse-group" id="third">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="link_for_description">
-                            <p>открыть характеристики</p>
-                        </div>
-                        <div class="price">
-                            <p>от</p>
-                            <p>4 600 $</p>
-                            <p>доход</p>
-                        </div>
-                        <div class="btn-block">
-                            <button class="btn">Сделать заказ</button>
+                            <div class="show-block collapse" data-parent="#collapse-group" id="fours">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
+                                </div>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
+                                </div>
+                            </div>
+                            <div class="show-block collapse" data-parent="#collapse-group" id="fifth">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
+                                </div>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="package premium">
+                    <div class="package premium" id="collapse-group2" role="tablist" aria-multiselectable="true">
                         <div class="standard-header premium-header">
                             <p>пакет <span>premium</span></p>
                         </div>
@@ -594,166 +719,230 @@
                         <div class="power-block">
                             <button class="power power-js active" type="button" data-toggle="collapse"
                                     data-target="#first2" aria-expanded="true" aria-controls="october"
-                                    data-parent="#collapse-group">5 кВт</button>
+                                    data-parent="#collapse-group2">5 кВт</button>
                             <button class="power power-js" type="button" data-toggle="collapse" data-target="#second2"
-                                    aria-expanded="false" aria-controls="september" data-parent="#collapse-group">10 кВт</button>
+                                    aria-expanded="false" aria-controls="september" data-parent="#collapse-group2">10 кВт</button>
                             <button class="power power-js" type="button" data-toggle="collapse"
                                     data-target="#third2" aria-expanded="false" aria-controls="august"
-                                    data-parent="#collapse-group">15 кВт</button>
+                                    data-parent="#collapse-group2">15 кВт</button>
                             <button class="power power-js" type="button" data-toggle="collapse"
                                     data-target="#fours2" aria-expanded="false" aria-controls="july"
-                                    data-parent="#collapse-group">20 кВт</button>
+                                    data-parent="#collapse-group2">20 кВт</button>
                             <button class="power power-js" type="button" data-toggle="collapse"
                                     data-target="#fifth2" aria-expanded="false" aria-controls="june"
-                                    data-parent="#collapse-group">30 кВт</button>
+                                    data-parent="#collapse-group2">30 кВт</button>
                         </div>
                         <div class="package_description">
-                            <div class="row show-block collapse show" data-parent="#collapse-group" id="first2">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse show" data-parent="#collapse-group2" id="first2">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
                                 </div>
-                            </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="second2">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
-                                </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
-                                </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="third2">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse" data-parent="#collapse-group2" id="second2">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
                                 </div>
-                            </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="fours2">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
-                                </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
-                                </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                            <div class="row show-block collapse" data-parent="#collapse-group" id="fifth2">
-                                <div class="col-lg-4 col-4 equipment_name">
-                                    <p>Оборудование</p>
-                                    <p>Фотомодули</p>
-                                    <p>Инвертор</p>
-                                    <p>Солярный кабель</p>
-                                    <p>Металлоконст&shy;рукции</p>
-                                    <p>Расходные материалы</p>
-                                    <p>Монтажные пусконаладо&shy;чные работы</p>
+                            <div class="show-block collapse" data-parent="#collapse-group2" id="third2">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-lg-4 col-4 model">
-                                    <p>Модель</p>
-                                    <p>RSM60-6-280P</p>
-                                    <p>Инвертор AKSG-5K-DM</p>
-                                    <p>Altek 6 мм</p>
-                                    <p>Altek</p>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
                                 </div>
-                                <div class="col-lg-4 col-4 count">
-                                    <p>К-во</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>30</p>
-                                    <p>19</p>
-                                    <p>1</p>
-                                    <p>1</p>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="link_for_description">
-                            <p>открыть характеристики</p>
-                        </div>
-                        <div class="price">
-                            <p>от</p>
-                            <p>4 600 $</p>
-                            <p>доход</p>
-                        </div>
-                        <div class="btn-block">
-                            <button class="btn">Сделать заказ</button>
+                            <div class="show-block collapse" data-parent="#collapse-group2" id="fours2">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
+                                </div>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
+                                </div>
+                            </div>
+                            <div class="show-block collapse" data-parent="#collapse-group2" id="fifth2">
+                                <div class="hide-block">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-4 equipment_name">
+                                            <p>Оборудование</p>
+                                            <p>Фотомодули</p>
+                                            <p>Инвертор</p>
+                                            <p>Солярный кабель</p>
+                                            <p>Металлоконст&shy;рукции</p>
+                                            <p>Расходные материалы</p>
+                                            <p>Монтажные пусконаладо&shy;чные работы</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 model">
+                                            <p>Модель</p>
+                                            <p>RSM60-6-280P</p>
+                                            <p>Инвертор AKSG-5K-DM</p>
+                                            <p>Altek 6 мм</p>
+                                            <p>Altek</p>
+                                        </div>
+                                        <div class="col-lg-4 col-4 count">
+                                            <p>К-во</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>30</p>
+                                            <p>19</p>
+                                            <p>1</p>
+                                            <p>1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="link_for_description">
+                                    <p>открыть характеристики</p>
+                                </div>
+                                <div class="price">
+                                    <p>от</p>
+                                    <p>4 600 $</p>
+                                    <p>доход</p>
+                                </div>
+                                <div class="btn-block">
+                                    <button class="btn">Сделать заказ</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1547,28 +1736,9 @@
                                         </div>
                                         <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                             <div class="text-description">
-                                                <p>местоположение: </p>
-                                                <p>г. Липовец</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>тип сооружения: </p>
-                                                <p>навес под авто</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>мощность: </p>
-                                                <p>15 кВт.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>Инвертор: </p>
-                                                <p>Refusol 13К.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>фотомодули: </p>
-                                                <p>Risen</p>
-                                            </div>
-                                            <div class="text-description price">
-                                                <p>Прибыль:</p>
-                                                <p>ХХХ $</p>
+                                                <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                                <p>Годовая выработка</p>
+                                                <p>800 кВт.</p>
                                             </div>
                                             <a href="#">Узнать подробнее</a>
                                         </div>
@@ -1581,28 +1751,9 @@
                                         </div>
                                         <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                             <div class="text-description">
-                                                <p>местоположение: </p>
-                                                <p>г. Липовец</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>тип сооружения: </p>
-                                                <p>навес под авто</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>мощность: </p>
-                                                <p>15 кВт.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>Инвертор: </p>
-                                                <p>Refusol 13К.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>фотомодули: </p>
-                                                <p>Risen</p>
-                                            </div>
-                                            <div class="text-description price">
-                                                <p>Прибыль:</p>
-                                                <p>ХХХ $</p>
+                                                <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                                <p>Годовая выработка</p>
+                                                <p>800 кВт.</p>
                                             </div>
                                             <a href="#">Узнать подробнее</a>
                                         </div>
@@ -1615,28 +1766,9 @@
                                         </div>
                                         <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                             <div class="text-description">
-                                                <p>местоположение: </p>
-                                                <p>г. Липовец</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>тип сооружения: </p>
-                                                <p>навес под авто</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>мощность: </p>
-                                                <p>15 кВт.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>Инвертор: </p>
-                                                <p>Refusol 13К.</p>
-                                            </div>
-                                            <div class="text-description">
-                                                <p>фотомодули: </p>
-                                                <p>Risen</p>
-                                            </div>
-                                            <div class="text-description price">
-                                                <p>Прибыль:</p>
-                                                <p>ХХХ $</p>
+                                                <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                                <p>Годовая выработка</p>
+                                                <p>800 кВт.</p>
                                             </div>
                                             <a href="#">Узнать подробнее</a>
                                         </div>
@@ -1657,28 +1789,9 @@
                                 </div>
                                 <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                     <div class="text-description">
-                                        <p>местоположение: </p>
-                                        <p>г. Липовец</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>тип сооружения: </p>
-                                        <p>навес под авто</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>мощность: </p>
-                                        <p>15 кВт.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>Инвертор: </p>
-                                        <p>Refusol 13К.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>фотомодули: </p>
-                                        <p>Risen</p>
-                                    </div>
-                                    <div class="text-description price">
-                                        <p>Прибыль:</p>
-                                        <p>ХХХ $</p>
+                                        <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                        <p>Годовая выработка</p>
+                                        <p>800 кВт.</p>
                                     </div>
                                     <a href="#">Узнать подробнее</a>
                                 </div>
@@ -1689,28 +1802,9 @@
                                 </div>
                                 <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                     <div class="text-description">
-                                        <p>местоположение: </p>
-                                        <p>г. Липовец</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>тип сооружения: </p>
-                                        <p>навес под авто</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>мощность: </p>
-                                        <p>15 кВт.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>Инвертор: </p>
-                                        <p>Refusol 13К.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>фотомодули: </p>
-                                        <p>Risen</p>
-                                    </div>
-                                    <div class="text-description price">
-                                        <p>Прибыль:</p>
-                                        <p>ХХХ $</p>
+                                        <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                        <p>Годовая выработка</p>
+                                        <p>800 кВт.</p>
                                     </div>
                                     <a href="#">Узнать подробнее</a>
                                 </div>
@@ -1721,28 +1815,9 @@
                                 </div>
                                 <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                     <div class="text-description">
-                                        <p>местоположение: </p>
-                                        <p>г. Липовец</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>тип сооружения: </p>
-                                        <p>навес под авто</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>мощность: </p>
-                                        <p>15 кВт.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>Инвертор: </p>
-                                        <p>Refusol 13К.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>фотомодули: </p>
-                                        <p>Risen</p>
-                                    </div>
-                                    <div class="text-description price">
-                                        <p>Прибыль:</p>
-                                        <p>ХХХ $</p>
+                                        <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                        <p>Годовая выработка</p>
+                                        <p>800 кВт.</p>
                                     </div>
                                     <a href="#">Узнать подробнее</a>
                                 </div>
@@ -1753,28 +1828,9 @@
                                 </div>
                                 <div class="col-lg-5 col-10 offset-1 offset-lg-0 slayd_text">
                                     <div class="text-description">
-                                        <p>местоположение: </p>
-                                        <p>г. Липовец</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>тип сооружения: </p>
-                                        <p>навес под авто</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>мощность: </p>
-                                        <p>15 кВт.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>Инвертор: </p>
-                                        <p>Refusol 13К.</p>
-                                    </div>
-                                    <div class="text-description">
-                                        <p>фотомодули: </p>
-                                        <p>Risen</p>
-                                    </div>
-                                    <div class="text-description price">
-                                        <p>Прибыль:</p>
-                                        <p>ХХХ $</p>
+                                        <p>Винницкая обл., сетевая солнечная электростанция мощностью 20 кВт.</p>
+                                        <p>Годовая выработка</p>
+                                        <p>800 кВт.</p>
                                     </div>
                                     <a href="#">Узнать подробнее</a>
                                 </div>
