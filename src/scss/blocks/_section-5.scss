@@ -85,8 +85,10 @@
 			background: #fcdd4a;
 		}
 	}
-	.package_description {
+	.hide-block {
 		display: none;
+	}
+	.package_description {
 		margin-top: 30px;
 		padding: 0 15px;
 		.equipment_name, .model, .count {
@@ -112,6 +114,7 @@
 	}
 	.link_for_description {
 		margin-top: 30px;
+		width: 100%;
 		p {
 			text-transform: uppercase;
 			text-decoration: underline;
@@ -125,6 +128,7 @@
 	}
 	.price {
 		margin: 25px 0;
+		width: 100%;
 		p {
 			font-size: 18px;
 			color: #333333;
@@ -139,6 +143,9 @@
 				margin-bottom: 0;
 			}
 		}
+	}
+	.btn-block {
+		width: 100%;
 	}
 	.btn {
 		background: #fcdd4a;
