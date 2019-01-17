@@ -1,3 +1,15 @@
+function toggleHeader(){
+    var scroll_status = $(document).scrollTop();
+    if(scroll_status > 95) {
+        $("nav").addClass("fixed");
+    }
+    else {
+        $("nav").removeClass("fixed");
+    }
+}
+$(document).scroll(function(){
+    toggleHeader();
+});
 $(document).ready(function() {
     $('select').styler();
     $('.power-js').click(function () {

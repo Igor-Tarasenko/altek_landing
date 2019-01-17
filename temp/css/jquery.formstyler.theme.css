@@ -58,7 +58,6 @@
 	font-size: 14px;
 	font-weight: 300;
 	max-height: 150px;
-	overflow-y: scroll;
 }
 .jq-selectbox__search {
 	margin: 5px;
@@ -84,6 +83,7 @@
 .jq-selectbox ul {
 	margin: 0;
 	padding: 0;
+	max-height: 150px!important;
 }
 .jq-selectbox li {
 	min-height: 18px;

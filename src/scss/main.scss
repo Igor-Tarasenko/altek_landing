@@ -76,5 +76,23 @@ b {
 button:focus {
 	outline: none;
 }
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #FFFFFF;
+	z-index: 9999;
+	ul {
+		justify-content: center!important;
+		padding: 10px 0;
+		li {
+			margin-right: 45px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
 
 @import 'index';

@@ -106,9 +106,24 @@
 				}
 			}
 		}
+		.equipment_name {
+			p {
+				text-transform: uppercase;
+			}
+		}
 		.model, .count {
 			p {
 				font-weight: 400;
+			}
+		}
+		.installation {
+			margin-top: 15px;
+			p {
+				font-size: 11px;
+				text-transform: uppercase;
+				color: #333333;
+				text-align: left;
+				font-weight: bold;
 			}
 		}
 	}
@@ -151,6 +166,9 @@
 		background: #fcdd4a;
 		padding: 15px 16px;
 		width: 303px;
+		&:hover {
+			background: #f9bb00;
+		}
 	}
 	.package_text-block {
 		min-height: 85px;

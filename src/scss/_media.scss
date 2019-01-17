@@ -201,10 +201,20 @@
 		margin: 5px 0;
 	}
 	.navbar-collapse {
-		margin: 12px 0;
+		background: #ffffff;
+		height: 100%;
+		position: relative;
+		z-index: 1000;
 	}
 	.modal-dialog {
 		max-width: 80%;
+	}
+	header .header-menu {
+		margin-top: 20px;
+		height: 40px;
+	}
+	.fixed ul li {
+		margin-right: 0;
 	}
 }
 @media screen and (max-width: 767px) {

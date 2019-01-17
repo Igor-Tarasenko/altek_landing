@@ -54,6 +54,11 @@
 			outline: none;
 			font-size: 18px;
 			margin-top: 20px;
+			transition: .3s;
+			&:hover {
+				background: #ffffff;
+				color: #f69024;
+			}
 		}
 	}
 }

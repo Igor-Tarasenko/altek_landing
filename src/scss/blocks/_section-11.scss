@@ -49,6 +49,9 @@
 		border-radius: 5px;
 		padding: 16px 16px;
 		width: 363px;
+		&:hover {
+			background: #f9bb00;
+		}
 	}
 	.question-block-more {
 		display: none;
