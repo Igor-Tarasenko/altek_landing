@@ -82,6 +82,12 @@
 	.section-7 .slayd_text .text-description p, .section-7 .slayd_text a {
 		font-size: 17px;
 	}
+	.section-7 .slayd_text .text-description .working-out p {
+		font-size: 20px;
+	}
+	.section-7 .slayd_text .text-description .working-out p:last-child {
+		font-size: 25px;
+	}
 	.section-8 h3 {
 		font-size: 20px;
 	}
@@ -131,6 +137,13 @@
 	}
 	header .phone {
 		padding-left: 0;
+		min-height: 35px!important;
+		min-width: 36px!important;
+		margin-top: 25px !important;
+		background-size: contain;
+	}
+	header .language ul {
+		margin-top: 37px;
 	}
 	h1 {
 		font-size: 26px;
@@ -258,6 +271,9 @@
 	.section-7 .carousel-control-prev, .section-7 .carousel-control-next {
 		width: 6%;
 	}
+	.section-7 .slayd_text .text-description .working-out {
+		margin: 15px 0;
+	}
 	.section-12 .contacts-block ul li:last-child {
 		margin-left: 10px
 	}
@@ -326,12 +342,22 @@
 	}
 	header .header-link a {
 		font-size: 12px;
-		min-height: 0px;
+		max-height: 0px;
 		min-width: 25px;
+		margin-top: 37px;
 	}
 	header .instagram {
-		background: url(../img/insta-icon.png) no-repeat center;
+		background: url(../img/insta-icon.png) no-repeat top;
 		background-size: contain;
+	}
+	header .phone {
+		max-height: 27px !important;
+		min-height: 15px!important;
+		min-width: 25px !important;
+		margin-top: 34px !important;
+	}
+	header .language ul {
+		margin-top: 39px;
 	}
 	header .language ul li {
 		font-size: 14px;
