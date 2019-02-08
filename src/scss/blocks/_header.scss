@@ -1,4 +1,9 @@
 header {
+	.logo {
+		img {
+			margin-top: 13px;
+		}
+	}
 	.header-link {
 		display: flex;
 		justify-content: flex-end;
@@ -7,26 +12,26 @@ header {
 			text-decoration: none;
 			font-size: 27px;
 			display: inline-block;
-			min-height: 50px;
-			min-width: 50px;
+			min-height: 40px;
+			min-width: 40px;
 			margin-right: 10px;
 			margin-top: 25px;
 			transition: .3s;
 		}
 	}
 	.facebook {
-		background: url("../img/facebook-icon.png") no-repeat;
+		background: url("../img/facebook-icon.png") no-repeat bottom;
 		background-size: contain;
 		&:hover {
-			background: url("../img/facebook-icon-hover.png") no-repeat;
+			background: url("../img/facebook-icon-hover2.png") no-repeat bottom;
 			background-size: contain;
 		}
 	}
 	.instagram {
-		background: url("../img/insta-icon.png") no-repeat;
+		background: url("../img/insta-icon.png") no-repeat bottom;
 		background-size: contain;
 		&:hover {
-			background: url("../img/insta-icon-hover.png") no-repeat;
+			background: url("../img/insta-icon-hover2.png") no-repeat bottom;
 			background-size: contain;
 		}
 	}
@@ -36,11 +41,17 @@ header {
 		display: inline-block;
 		margin-top: 0!important;
 		padding-top: 12px;
+		background-size: 40px;
+		transition: .3s;
 		a {
 			display: block;
 			margin: 0 0 -6px 0;
 			font-size: 18px;
 			min-height: 10px!important;
+		}
+		&:hover {
+			background: url("../img/phone-icon-hover.png") no-repeat left bottom;
+			background-size: 40px;
 		}
 	}
 	.language {

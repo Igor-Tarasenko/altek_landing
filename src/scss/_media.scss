@@ -141,6 +141,9 @@
 		min-width: 36px!important;
 		margin-top: 25px !important;
 		background-size: contain;
+		&:hover {
+			background-size: 36px;
+		}
 	}
 	header .language ul {
 		margin-top: 37px;
@@ -349,18 +352,38 @@
 	header .instagram {
 		background: url(../img/insta-icon.png) no-repeat top;
 		background-size: contain;
+		&:hover {
+			background: url("../img/insta-icon-hover2.png") no-repeat bottom;
+			background-size: contain;
+		}
 	}
 	header .phone {
 		max-height: 27px !important;
 		min-height: 15px!important;
 		min-width: 25px !important;
 		margin-top: 34px !important;
+		background-size: contain;
+		&:hover {
+			background: url("../img/phone-icon-hover.png") no-repeat left bottom;
+			background-size: 25px;
+		}
 	}
 	header .language ul {
 		margin-top: 39px;
 	}
 	header .language ul li {
 		font-size: 14px;
+	}
+	header .facebook {
+		background: url("../img/facebook-icon.png") no-repeat top;
+		background-size: contain;
+		&:hover {
+			background: url("../img/facebook-icon-hover2.png") no-repeat top;
+			background-size: contain;
+		}
+	}
+	header .logo img {
+		margin-top: 0;
 	}
 }
 @media screen and (max-width: 437px) {
